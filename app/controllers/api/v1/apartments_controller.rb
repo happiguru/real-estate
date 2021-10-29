@@ -18,7 +18,7 @@ class Api::V1::ApartmentsController < ActionController::API
     private
 
     def apartment_params
-    params.permit(:apartment_name, :city, :address, :description_short, :price)
+        params.permit(:apartment_name, :city, :address, :description_short, :price)
     end
     
 end
