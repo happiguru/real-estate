@@ -1,51 +1,101 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Real Estate Application
-Property Finder Application Back-end
+# Project: FIND MY HOUSE API
 
-This README normally document the steps involved to run a live version of a Twitter Clone.
+> This is an API of a frontend mobile web application where you can find a house wherever you are. The API was built using Ruby on Rails.
 
-<!-- ![app screenshot](img/Screenshot_2020-10-16_15-19-45.png)
-![app screenshot](img/Screenshot_2020-10-16_15-20-37.png) -->
 
-Things you may want to cover:
+## Live demo
 
-* Ruby version
-- Ruby. v2.7.0
-- Ruby on Rails. v6.0.3.3
-- Using Rubocop Linters.
+You can visit the deployed version of the API [this link]()
 
-## 🛠 Getting Started
-## Install 
-In order to run, you need to install Ruby in your computer. For windows you can go to [Ruby installer](https://rubyinstaller.org/) and for MAC and LINUX you can go to [Ruby official site](https://www.ruby-lang.org/en/downloads/) for intructions on how to intall it. Then you can clone the project by typing ```git clone git@github.com:happiguru/real-estate.git``` on your terminal or download the source code from the repository.
+## Built With
 
-## Run the application
-To get a local copy up and running follow these simple example steps.
+- Ruby on rails
 
-- Open a terminal
-- Copy this code : ```git clone "git@github.com:happiguru/real-estate.git"```
-- Run the program with this code : ```bundle install```
-- Run the program with this code : ```rails db:create rails db:migrate rails server```
-- Stop the program with: "Ctrl + C" (Windows or Linux) or "Command + C"(Apple)
+## Getting Started
 
-## Open app in browser
+To get a local copy up and running follow these simple example steps:
 
-- When the program is running go to your browser
-- put: localhost:3000/
-- Click on login, register and Sign up as a new user
-- Enjoy the app.
+- Clone the repository as indicated by the Setup section below
 
-## ✒️ Authors
+### Prerequisites
+
+- Text editor
+- GitHub
+- Git
+- ruby
+- ruby on rails
+
+### Setup
+
+Clone repository from GitHub to your local drive by following these steps:
+
+- Go to the main page of the repository
+- Above the listed files, click the green Code button
+- You can clone the repository using:
+ Find-My-House-api.git`.
+  - HTTPS:`$ git clone git@github.com:happiguru/real-estate.git `.
+- Open Terminal
+- Change the current working directory to the location you want the cloned directory
+- Type one of the git clone commands listed above.
+- Press Enter to create your local clone
+- Remember: Yarn packages need to be installed by running the command <code>yarn install</code> for local setup. Otherwise, the app generates an error.
+- Install all the available gems with the command `bundle install`
+- Create a database by typing in the terminal <code>rails db:create</code> and then <code>rails db:migrate</code> to define changes to your database schema
+- Open your terminal and type <code>rails s</code>. After that join to localhost at `http://localhost:3000/`
+
+### Available Routes
+
+To get access to certain routes the require to be authenticated, please create an account then you will get a token that should be used as the `Authorization` header to access those routes.
+
+   `GET: /houses` -> To get the list of all the available houses, it doesn't require authentication.
+    `GET: /houses/1` -> To get a specific house, it doesn't require authentication.
+    `POST: /houses `-> To create a house, it requires to be authenticated and have the admin role.
+    `DELETE: /houses/1` -> To delete a specific hourse, it requires to be authenticated and have the admin role.
+    `GET: /rents/1` -> To get the rent houses for a specific user, it requires to be authenticated.
+    `DELETE: /rent/1` -> To delete a specific rent from the favourites table, it requires to be authenticated.
+    `GET: /users` -> To get the list of all the users, it requires to be authenticated and have the admin role.
+    `GET: /users/1` -> To get a specific user, it requires to be authenticated.
+    `DELETE: /users/1` -> To delete a specific user, it requires to be authenticated and have the admin role
+    `POST: /users` -> To create a new user, it doesn't require to be authenticated.
+    `PUT: /users/1` -> To update a specific user, it requires to be authenticated.
+    `POST: /auth/login` -> To log in and receive the auth token, it requires to be authenticated.
+
+### Install
+
+- Install Atom or Microsoft Visual Studio text editor to view the code on your local machine.
+- Install Git.
+- Install ruby
+- Install ruby on rails
+
+### Tests
+
+- This project includes unit tests and integration tests, to run the tests you will just need to run the following command in the terminal from the root of the project
+  `$ rails db:migrate RAILS_ENV=test`
+  `$ bundle exec rspec`
+
+
+## Authors
 
 👤 **Stanley Enow Lekunze**
 
 - Github: [@happiguru](https://github.com/happiguru)
-- LinkedIn:[LinkedIn](https://www.linkedin.com/in/lekunze-nley)
+- Twitter: [@Lekunze_Nley](https://twitter.com/Lekunze_Nley)
+- Linkedin: [lekunze-nley](https://www.linkedin.com/in/lekunze-nley/)
 
-## 🤝 Contributing
-Contributions, issues and feature requests are welcome!
+## Contributing
 
-Feel free to check the [issues page](https://github.com/happiguru/Twitter-Clone/issues).
+Contributions, [issues](https://github.com/happiguru/real-estate/issues), and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
 
 ## 📝 License
-This project is [MIT](lic.url) licensed.
+
+This project is [MIT](LICENSE) licensed.

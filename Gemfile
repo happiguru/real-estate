@@ -1,14 +1,24 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.4'
+ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
+# Use sqlite3 as the database for Active Record
+group :development, :test do
+  gem 'sqlite3'
+end
 
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+group :development do
+  gem 'faker'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -19,15 +29,18 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+# Add bcrypt
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+# Add jwt
+gem 'jwt'
+# gem for testing
+gem 'rack-cors'
+gem 'rspec-rails', '~> 5.0.0'
+gem 'shoulda-matchers', '~> 4.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-gem 'bcrypt', '~> 3.1.7'
-
-gem 'rack-cors'
-gem "jwt", "~> 2.2"
-gem "dotenv-rails", groups: [:development, :test]
-gem 'active_model_serializers', '~> 0.10.0'
+# gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -38,10 +51,6 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'database_cleaner'
-  gem 'factory_bot_rails'
-  gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
-  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
@@ -60,7 +69,6 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'shoulda-matchers'
   gem 'webdrivers'
 end
 

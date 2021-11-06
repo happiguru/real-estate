@@ -10,30 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_01_215259) do
+ActiveRecord::Schema.define(version: 2021_08_16_144621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "apartments", force: :cascade do |t|
-    t.string "apartmentId"
-    t.string "apartment_name"
-    t.string "apartmentimg"
-    t.string "city"
-    t.string "address"
-    t.text "description_short"
-    t.text "description_long"
-    t.string "price"
+  create_table "houses", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "price"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+  end
+
+  create_table "rents", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "house_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username", null: false
-    t.string "email"
-    t.string "password_digest"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.string "password_digest"
+    t.boolean "is_admin"
   end
 
 end
