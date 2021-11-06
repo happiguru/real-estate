@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project: FIND MY HOUSE API
+# Real Estate Application
 
 > This is an API of a frontend mobile web application where you can find a house wherever you are. The API was built using Ruby on Rails.
 
@@ -27,47 +27,49 @@ To get a local copy up and running follow these simple example steps:
 - ruby
 - ruby on rails
 
-### Setup
 
-Clone repository from GitHub to your local drive by following these steps:
+Things you may want to cover:
 
-- Go to the main page of the repository
-- Above the listed files, click the green Code button
-- You can clone the repository using:
- Find-My-House-api.git`.
-  - HTTPS:`$ git clone git@github.com:happiguru/real-estate.git `.
-- Open Terminal
-- Change the current working directory to the location you want the cloned directory
-- Type one of the git clone commands listed above.
-- Press Enter to create your local clone
-- Remember: Yarn packages need to be installed by running the command <code>yarn install</code> for local setup. Otherwise, the app generates an error.
-- Install all the available gems with the command `bundle install`
-- Create a database by typing in the terminal <code>rails db:create</code> and then <code>rails db:migrate</code> to define changes to your database schema
-- Open your terminal and type <code>rails s</code>. After that join to localhost at `http://localhost:3000/`
+* Ruby version
+- Ruby. v2.7.0
+- Ruby on Rails. v6.0.3.3
+- Using Rubocop Linters.
 
-### Available Routes
+## 🛠 Getting Started
+## Install 
+In order to run, you need to install Ruby in your computer. For windows you can go to [Ruby installer](https://rubyinstaller.org/) and for MAC and LINUX you can go to [Ruby official site](https://www.ruby-lang.org/en/downloads/) for intructions on how to intall it. Then you can clone the project by typing ```git clone git@github.com:happiguru/real-estate.git``` on your terminal or download the source code from the repository.
 
-To get access to certain routes the require to be authenticated, please create an account then you will get a token that should be used as the `Authorization` header to access those routes.
+## Run the application
+To get a local copy up and running follow these simple example steps.
 
-   `GET: /houses` -> To get the list of all the available houses, it doesn't require authentication.
-    `GET: /houses/1` -> To get a specific house, it doesn't require authentication.
-    `POST: /houses `-> To create a house, it requires to be authenticated and have the admin role.
-    `DELETE: /houses/1` -> To delete a specific hourse, it requires to be authenticated and have the admin role.
-    `GET: /rents/1` -> To get the rent houses for a specific user, it requires to be authenticated.
-    `DELETE: /rent/1` -> To delete a specific rent from the favourites table, it requires to be authenticated.
-    `GET: /users` -> To get the list of all the users, it requires to be authenticated and have the admin role.
-    `GET: /users/1` -> To get a specific user, it requires to be authenticated.
-    `DELETE: /users/1` -> To delete a specific user, it requires to be authenticated and have the admin role
-    `POST: /users` -> To create a new user, it doesn't require to be authenticated.
-    `PUT: /users/1` -> To update a specific user, it requires to be authenticated.
-    `POST: /auth/login` -> To log in and receive the auth token, it requires to be authenticated.
+- Open a terminal
+- Copy this code : ```git clone "git@github.com:happiguru/real-estate.git"```
+- Run the program with this code : ```yarn install```
+- Run the program with this code : ```bundle install```
+- Run the program with this code : ```rails db:create rails db:migrate rails server```
+- Stop the program with: "Ctrl + C" (Windows or Linux) or "Command + C"(Apple)
 
-### Install
+## Open app in browser
 
-- Install Atom or Microsoft Visual Studio text editor to view the code on your local machine.
-- Install Git.
-- Install ruby
-- Install ruby on rails
+- When the program is running go to your browser
+- put: localhost:3000/
+- Click on login, register and Sign up as a new user
+- Enjoy the app.
+
+## Available Routes
+
+#### `GET: /houses` -> To get the list of all the available houses, it doesn't require authentication.
+####  `GET: /houses/1` -> To get a specific house, it doesn't require authentication.
+####  `POST: /houses `-> To create a house, it requires to be authenticated and have the admin role.
+####  `DELETE: /houses/1` -> To delete a specific hourse, it requires to be authenticated and have the admin role.
+####  `GET: /rents/1` -> To get the rent houses for a specific user, it requires to be authenticated.
+####  `DELETE: /rent/1` -> To delete a specific rent from the favourites table, it requires to be authenticated.
+####  `GET: /users` -> To get the list of all the users, it requires to be authenticated and have the admin role.
+####  `GET: /users/1` -> To get a specific user, it requires to be authenticated.
+####  `DELETE: /users/1` -> To delete a specific user, it requires to be authenticated and have the admin role
+####  `POST: /users` -> To create a new user, it doesn't require to be authenticated.
+####  `PUT: /users/1` -> To update a specific user, it requires to be authenticated.
+####  `POST: /auth/login` -> To log in and receive the auth token, it requires to be authenticated.
 
 ### Tests
 
@@ -76,26 +78,18 @@ To get access to certain routes the require to be authenticated, please create a
   `$ bundle exec rspec`
 
 
-## Authors
+## ✒️ Authors
 
 👤 **Stanley Enow Lekunze**
 
 - Github: [@happiguru](https://github.com/happiguru)
-- Twitter: [@Lekunze_Nley](https://twitter.com/Lekunze_Nley)
-- Linkedin: [lekunze-nley](https://www.linkedin.com/in/lekunze-nley/)
+- LinkedIn:[LinkedIn](https://www.linkedin.com/in/lekunze-nley)
 
-## Contributing
+## 🤝 Contributing
+Contributions, issues and feature requests are welcome!
 
 Contributions, [issues](https://github.com/happiguru/real-estate/issues), and feature requests are welcome!
 
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Microverse
-
 ## 📝 License
+This project is [MIT](lic.url) licensed.
 
-This project is [MIT](LICENSE) licensed.
