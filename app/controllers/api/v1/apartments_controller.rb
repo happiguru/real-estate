@@ -2,7 +2,7 @@ class Api::V1::ApartmentsController < ActionController::API
   def index
     @apartments = Apartment.all
 
-    render json: @apartments
+    render json: { apartments: @apartments }, status: 200
   end
 
   def show

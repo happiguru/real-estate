@@ -8,6 +8,8 @@
 
 10.times do 
     Apartment.create(
+      apartmentId: Faker::Number.decimal_part(digits: 2),
+      apartmentimg: Faker::LoremFlickr.image(size: "730x411"),
       apartment_name: Faker::Restaurant.name,
       city: Faker::Address.city,
       address: Faker::Address.full_address,

@@ -16,7 +16,9 @@ ActiveRecord::Schema.define(version: 2021_11_01_215259) do
   enable_extension "plpgsql"
 
   create_table "apartments", force: :cascade do |t|
+    t.string "apartmentId"
     t.string "apartment_name"
+    t.string "apartmentimg"
     t.string "city"
     t.string "address"
     t.text "description_short"
@@ -27,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_215259) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "username", null: false
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
