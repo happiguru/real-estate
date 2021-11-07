@@ -2,8 +2,7 @@ User.create(
     name: 'happi',
     email: 'hguruman@gmail.com',
     password: 'password',
-    password_confirmation:'password',
-    is_admin: true
+    password_confirmation:'password'
 )
 
 8.times do
@@ -12,6 +11,6 @@ User.create(
         description: Faker::Lorem.sentence,
         price: Faker::Lorem.sentence,
         image: Faker::Lorem.sentence,
-        user_id: user.id
+        user_id: 3
     })
 end
