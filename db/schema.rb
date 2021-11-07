@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2021_08_16_144621) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "email"
     t.string "password_digest"
-    t.boolean "is_admin"
+    t.boolean "is_admin", default: true
   end
 
 end
