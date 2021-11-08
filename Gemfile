@@ -17,6 +17,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'faker'
 end
 
 # Use Puma as the app server
