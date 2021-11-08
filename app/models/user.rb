@@ -12,6 +12,6 @@ class User < ApplicationRecord
   has_many :rent_houses, through: :rents, source: :house
 
   def set_user_not_admin
-    self.is_admin = true
+    self.is_admin = false
   end
 end
