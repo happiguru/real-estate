@@ -3,6 +3,7 @@ User.create(
     email: 'hguruman@gmail.com',
     password: 'password',
     password_confirmation:'password'
+    user_id: true
 )
 
 8.times do
