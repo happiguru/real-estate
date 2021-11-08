@@ -1,9 +1,9 @@
-# User.create(
-#     name: 'happi',
-#     email: 'hguruman@gmail.com',
-#     password: 'password',
-#     password_confirmation:'password'
-# )
+User.create(
+    name: 'happi',
+    email: 'hguruman@gmail.com',
+    password: 'password',
+    password_confirmation:'password'
+)
 
 8.times do
     House.create({
@@ -11,6 +11,6 @@
         description: Faker::Lorem.sentence,
         price: Faker::Lorem.sentence,
         image: Faker::Lorem.sentence,
-        user_id: 4
+        user_id: user.id
     })
 end
